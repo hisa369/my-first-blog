@@ -10,7 +10,12 @@
         {% if user.is_authenticated %}
           <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
+<!--
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
+-->
+        <p>{{ post.nengetu|linebreaksbr }}</p>
+        <p>{{ post.dento|linebreaksbr }}</p>
+        <p>{{ post.kuchou|linebreaksbr }}</p>
     </div>
 {% endblock %}
