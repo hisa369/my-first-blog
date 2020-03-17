@@ -9,9 +9,22 @@ from django.shortcuts import redirect
 #    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 #    return render(request, 'blog/post_list.html', {'posts': posts})
 
+#def post_list(request):
+#    posts = Post.objects.all()
+#    return render(request, 'blog/post_list.html', {'posts': posts})
+
+#def post_list(request):
+#    infodata = Post.objects.all()
+#    infodata = Post.objects.values_list('nengetu','dento','kuchou')
+#    my_dict2 = {
+#        'posts':infodata,
+#    }
+#    return render(request, 'blog/post_list.html',my_dict2)
+
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
+
 
 def post_list2(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')

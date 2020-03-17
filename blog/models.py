@@ -20,4 +20,6 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+#        return self.title
+#        return self.nengetu
+         return '年月:' + str(self.nengetu) 

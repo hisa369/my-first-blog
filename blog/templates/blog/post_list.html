@@ -7,19 +7,16 @@
                   <<th> 空調使用量</th>
                   <<th> 電灯使用量</th>
               </tr>
-      {% for posts in posts %}
+      {% for i in posts %}
               <tr>
-                  <td {{ posts.title }}</td>>
-                  <td {{ posts.nengetu }}</td>>
-                  <td {{ posts.dento }}</td>>
-                  <td {{ posts.kuchou }}</td>>
-                    <<td> てすと</td>>
+                  <<td> {{ i.nengetu }}</td>>
+                  <<td> {{ i.dento }}</td>>
+                  <<td> {{ i.kuchou }}</td>>
               </tr>
       {% endfor %}
             </table>
-            <div class="date">
-                {{ post.published_date }}
-            </div>
         </div>
+            <!-- personのfirst_name,last_nameをそれぞれ表示  -->
+
 
 {% endblock %}
