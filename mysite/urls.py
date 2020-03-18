@@ -20,3 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
 ]
+
+
+admin.site.site_title = '管理画面'
+admin.site.site_header = '管理画面'
+admin.site.index_title = 'データ／ユーザ管理'

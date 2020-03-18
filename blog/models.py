@@ -8,12 +8,12 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
 
-    nengetu = models.CharField(max_length=6, default=202001)
-    dento = models.IntegerField(default=100)
-    kuchou = models.IntegerField(default=100)
+    nengetu = models.CharField('年月', max_length=6, default=202001)
+    dento = models.IntegerField('電灯使用量', default=0)
+    kuchou = models.IntegerField('空調使用量', default=0)
 
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    created_date = models.DateTimeField('作成日', default=timezone.now)
+    published_date = models.DateTimeField('公開日', blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -21,5 +21,8 @@ class Post(models.Model):
 
     def __str__(self):
 #        return self.title
-#        return self.nengetu
-         return '年月:' + str(self.nengetu) 
+        return self.nengetu
+#         return str(self.nengetu, self.dento, self.kuchou, self.created_date)
+    class Meta:
+        verbose_name = 'データ'
+        verbose_name_plural = 'データ'
