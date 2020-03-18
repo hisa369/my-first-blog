@@ -5,8 +5,8 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
+#    title = models.CharField(max_length=200)
+#    text = models.TextField()
 
     nengetu = models.CharField('年月', max_length=6, default=202001)
     dento = models.IntegerField('電灯使用量', default=0)
